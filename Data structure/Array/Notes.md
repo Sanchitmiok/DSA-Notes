@@ -31,7 +31,22 @@
 
 <li>
 
-[Here](link)
+[Median of 2 Sorted Arrays of Different Sizes (****)](https://www.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-different-sizes/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
  </li>
 
+<li>
+
+[Spirally traversing a matrix](https://www.geeksforgeeks.org/problems/spirally-traversing-a-matrix-1587115621/1)
+ </li>
+<li>
+
+[Count pairs with given sum](https://www.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1)
+ </li>
+<li>
+
+[Longest Sub-Array with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)
+ </li>
+
+[Here](link)
+ </li>
 </ol>
