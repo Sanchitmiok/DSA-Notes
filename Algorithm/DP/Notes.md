@@ -20,6 +20,14 @@
 
  <li>
 
+ [0/1 Knap Sack](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
+
+ </li>
+
+ </li>
+
+ <li>
+
  [Write here]()
 
  </li>
