@@ -45,7 +45,17 @@
 <li>
 
 [Longest Sub-Array with Sum K](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)
+
+
  </li>
+
+ <li>
+
+[Sorted subsequence of size 3](https://www.geeksforgeeks.org/problems/sorted-subsequence-of-size-3/1)
+ </li>
+
+
+ <li>
 
 [Here](link)
  </li>
