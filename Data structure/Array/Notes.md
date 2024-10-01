@@ -21,7 +21,7 @@
 
 <li>
 
-[Repeat and Missing Number](https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1)
+[Repeat and Missing Number ***](https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1)
  </li>
 
 <li>
