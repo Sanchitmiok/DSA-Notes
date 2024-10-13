@@ -57,6 +57,6 @@
 
  <li>
 
-[Here](link)
+[Majority Vote (Boyer Moore Voting Algo.)](https://www.geeksforgeeks.org/problems/majority-vote/1)
  </li>
 </ol>
