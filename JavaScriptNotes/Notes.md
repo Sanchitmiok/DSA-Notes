@@ -1021,3 +1021,240 @@ outerFunction();
   console.log(true || false); // Output: true
   console.log(!true); // Output: false
   ```
+
+
+# DOM & BOM
+
+## **Window Object**  
+- The **`window` object** is the global object in the browser.  
+- It provides properties, methods, and events to interact with the browser window/tab.  
+- Global variables and functions declared with `var` become properties of `window`.  
+
+### **Key Properties**  
+- **`window.document`** → Refers to the DOM.  
+- **`window.innerHeight` & `window.innerWidth`** → Get viewport dimensions.  
+- **`window.location`** → Provides URL details.  
+  ```js
+  console.log(window.location.href); // Outputs current URL  
+  ```  
+
+
+### **Key Methods**  
+- **`window.alert(message)`** → Shows an alert.  
+- **`window.confirm(message)`** → Shows a confirmation box.  
+- **`window.prompt(message, default)`** → Shows an input dialog.  
+- **`window.open(url, name, specs)`** → Opens a new tab/window.  
+- **`window.close()`** → Closes the opened window.  
+- **`window.setTimeout(func, delay)`** → Executes after a delay.  
+- **`window.setInterval(func, interval)`** → Repeats execution.  
+
+```js
+setTimeout(() => console.log("Delayed execution"), 2000);  
+```  
+
+---
+
+## **History Object**  
+- The **`history` object** allows navigation through session history.  
+- Part of the **`window` object** and can be accessed via `window.history`.  
+
+### **Key Properties**  
+- **`history.length`** → Returns the number of pages in session history.  
+  ```js
+  console.log(history.length);  
+  ```  
+
+### **Key Methods**  
+- **`history.back()`** → Navigates to the previous page.  
+- **`history.forward()`** → Navigates to the next page.  
+- **`history.go(n)`** → Moves `n` steps forward or backward.  
+
+```js
+history.go(-2); // Moves back two pages  
+```  
+
+---
+
+## **Navigator Object**  
+- The **`navigator` object** provides information about the browser and device.  
+
+### **Key Properties**  
+- **`navigator.userAgent`** → Returns browser details.  
+- **`navigator.language`** → Returns the browser's language.  
+- **`navigator.onLine`** → Checks if the browser is online (`true`/`false`).  
+
+```js
+console.log(navigator.userAgent); // Outputs browser details  
+console.log(navigator.language);  // Outputs browser language  
+```  
+
+### **Key Methods**  
+- **`navigator.geolocation.getCurrentPosition(success, error)`** → Fetches location.  
+
+```js
+navigator.geolocation.getCurrentPosition(
+  (position) => console.log(position.coords.latitude, position.coords.longitude),
+  (error) => console.error("Error fetching location")
+);  
+```  
+
+---
+
+## **Screen Object**  
+- The **`screen` object** provides information about the user's screen.  
+
+### **Key Properties**  
+- **`screen.width`** → Returns screen width.  
+- **`screen.height`** → Returns screen height.  
+- **`screen.availWidth` & `screen.availHeight`** → Available screen dimensions (excluding UI elements).  
+- **`screen.colorDepth`** → Returns color depth of the screen.  
+
+```js
+console.log(`Width: ${screen.width}, Height: ${screen.height}`);  
+console.log(`Color Depth: ${screen.colorDepth}`);  
+```  
+
+---
+## **Document Object**
+  - **Definition:** Represents the entire HTML document loaded in the browser.
+  - **Key Concept:** Acts as the entry point to the **Document Object Model (DOM)**.
+  - **Usage:** Enables interaction and manipulation of HTML elements, structure, and content.
+
+## **getElementById**
+  - **Definition:** Retrieves a single element based on its **id** attribute.
+  - **Key Concept:** Returns the **first matching element** with the specified id.
+  - **Syntax Example:**  
+    ```js
+    const element = document.getElementById("uniqueId");
+    ```
+  - **Important Note:** **Case-sensitive** matching; only one element should have a given id.
+
+## **getElementsByClassName**
+  - **Definition:** Retrieves a collection of elements that share a common **class name**.
+  - **Key Concept:** Returns a **live HTMLCollection** reflecting changes in the DOM.
+  - **Syntax Example:**  
+    ```js
+    const elements = document.getElementsByClassName("className");
+    ```
+  - **Usage:** Useful for applying changes to multiple elements sharing the same styling or behavior.
+
+## **getElementsByName**
+  - **Definition:** Retrieves a collection of elements by their **name** attribute.
+  - **Key Concept:** Commonly used for form elements; returns a **NodeList**.
+  - **Syntax Example:**  
+    ```js
+    const elements = document.getElementsByName("elementName");
+    ```
+  - **Usage:** Facilitates grouping and manipulating elements that share the same name attribute.
+
+## **getElementsByTagName**
+  - **Definition:** Retrieves a collection of elements with the specified **tag name**.
+  - **Key Concept:** Returns a **live HTMLCollection** reflecting real-time changes in the DOM.
+  - **Syntax Example:**  
+    ```js
+    const elements = document.getElementsByTagName("tagName");
+    ```
+  - **Usage:** Ideal for targeting all elements of a specific type, such as all `<div>` or `<p>` elements.
+
+## **innerHTML**
+  - **Definition:** Property that represents the **HTML content** within an element.
+  - **Key Concept:** Enables **reading** or **modifying** the inner markup of an element.
+  - **Syntax Example:**  
+    ```js
+    const content = element.innerHTML;
+    element.innerHTML = "<p>New Content</p>";
+    ```
+  - **Usage:** Useful for dynamically updating the content inside an element.
+
+## **outerHTML**
+  - **Definition:** Property that represents the **HTML content** of an element, including the element itself.
+  - **Key Concept:** Allows **retrieval** or **replacement** of the entire element with its outer tags.
+  - **Syntax Example:**  
+    ```js
+    const fullContent = element.outerHTML;
+    element.outerHTML = "<section>New Structure</section>";
+    ```
+  - **Usage:** Useful when you need to replace or capture the entire element structure.
+
+---
+
+# OOPs
+  - **Definition:** Programming paradigm based on **objects** and **classes**.
+  - **Key Concepts:** Encapsulation, inheritance, polymorphism, and abstraction.
+  
+- **Class**
+  - **Definition:** Blueprint for creating **objects**.
+  - **Key Concept:** Encapsulates data and behavior in a single structure.
+  - **JS Example (ES6 Class):**
+    ```js
+    class Animal {
+      constructor(name) {
+        this.name = name;
+      }
+      speak() {
+        console.log(`${this.name} makes a noise.`);
+      }
+      static info() {
+        console.log("This is the Animal class.");
+      }
+    }
+    ```
+
+- **Objects**
+  - **Definition:** Instances created from a **class**.
+  - **Key Concept:** Contain **properties** (data) and **methods** (functions).
+
+- **Constructor**
+  - **Definition:** Special method within a **class**.
+  - **Key Concept:** Initializes new **objects** with default or passed values.
+  - **JS Example:**
+    ```js
+    class Person {
+      constructor(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+    }
+    const person = new Person("Alice", 30);
+    ```
+
+- **Static Method**
+  - **Definition:** Method associated with the **class** rather than any **object**.
+  - **Key Concept:** Called on the class itself without instantiation.
+  - **JS Example:**
+    ```js
+    class Calculator {
+      static add(a, b) {
+        return a + b;
+      }
+    }
+    console.log(Calculator.add(5, 3));
+    ```
+
+- **Encapsulation**
+  - **Definition:** Bundling **data** and **methods** within a single **class**.
+  - **Key Concept:** Restricts direct access to some of an object's components.
+
+- **Inheritance**
+  - **Definition:** Mechanism where a **class** derives properties and methods from another **class**.
+  - **Key Concept:** Promotes code reuse.
+  - **JS Example:**
+    ```js
+    class Dog extends Animal {
+      speak() {
+        console.log(`${this.name} barks.`);
+      }
+    }
+    const myDog = new Dog("Buddy");
+    myDog.speak();
+    ```
+
+- **Polymorphism**
+  - **Definition:** Ability to call the same method on different objects and have each respond differently.
+  - **Key Concept:** Method overriding allows **subclasses** to provide a specific implementation.
+
+- **Abstraction**
+  - **Definition:** Hiding complex implementation details and exposing only essential features.
+  - **Key Concept:** Simplifies interaction with **objects**.
+
+End_of_Notes
