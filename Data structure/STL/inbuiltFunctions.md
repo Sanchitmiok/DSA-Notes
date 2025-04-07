@@ -183,5 +183,39 @@ for (int i : v_intersection) {
     std::cout << i << " ";
 }
 ```
+### 11. **`memset`**
 
-These functions are part of the C++ Standard Library and can be incredibly useful in simplifying and optimizing your code. Each function serves a specific purpose and can be used in various scenarios to achieve different tasks efficiently. Let me know if you have any questions or need further explanations on any of these functions!
+- **Definition**: `memset` is a C/C++ standard library function used to fill a block of memory with a specific value.
+
+### **Syntax**
+```c
+void *memset(void *dest, int c, size_t n);
+```
+- **Parameters**:
+  - `dest`: Pointer to the memory block.
+  - `c`: Value to fill (converted to `unsigned char`).
+  - `n`: Number of bytes to fill.
+- **Returns**: Pointer to the memory block (`dest`).
+
+### **Use Cases**
+1. **Initialize arrays/buffers**:  
+   ```c
+   int arr[10];
+   memset(arr, 0, sizeof(arr)); // Sets all elements to 0
+   ```
+2. **Reset structures**:  
+   ```c
+   memset(&structVar, 0, sizeof(structVar));
+   ```
+3. **Set specific patterns in memory**:  
+   ```c
+   char str[] = "Hello";
+   memset(str, '*', 3); // Result: "***lo"
+   ```
+
+### **Key Points**
+- Efficient for contiguous memory.
+- Treats `c` as an unsigned byte value.
+- Commonly used for zeroing memory or setting default values.
+
+---
